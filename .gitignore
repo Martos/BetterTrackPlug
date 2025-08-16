@@ -52,3 +52,4 @@ build/
 *.skprx
 CMakeCache.txt
 CmakeFiles/
+Makefile
