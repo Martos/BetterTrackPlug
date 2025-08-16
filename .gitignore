@@ -53,3 +53,9 @@ build/
 CMakeCache.txt
 CmakeFiles/
 Makefile
+
+
+BetterTrackPlug
+*.out
+*.velf
+*.cmake
