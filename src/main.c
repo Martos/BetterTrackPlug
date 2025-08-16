@@ -2,7 +2,12 @@
 #include <taihen.h>
 #include <psp2kern/kernel/sysmem.h>
 #include <psp2kern/kernel/modulemgr.h>
-#include <psp2kern/kernel/iofilemgr.h>
+#include <psp2kern/kernel/threadmgr.h> 
+#include <psp2kern/types.h>
+#include <psp2common/kernel/iofilemgr.h>
+#include <psp2kern/kernel/sysroot.h>
+#include <psp2kern/io/fcntl.h>
+#include <psp2kern/io/stat.h>
 #include <string.h>
 
 #define printf ksceDebugPrintf

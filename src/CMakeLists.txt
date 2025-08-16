@@ -1,15 +1,15 @@
-cmake_minimum_required(VERSION 2.8)
+cmake_minimum_required(VERSION 3.16)
 
 if(NOT DEFINED CMAKE_TOOLCHAIN_FILE)
-  if(DEFINED ENV{DOLCESDK})
-	set(CMAKE_TOOLCHAIN_FILE "$ENV{DOLCESDK}/share/dolce.toolchain.cmake" CACHE PATH "toolchain file")
+  if(DEFINED ENV{VITASDK})
+    set(CMAKE_TOOLCHAIN_FILE "$ENV{VITASDK}/share/vita.toolchain.cmake" CACHE PATH "toolchain file")
   else()
-	message(FATAL_ERROR "Please define DOLCESDK to point to your SDK path!")
+    message(FATAL_ERROR "Please define VITASDK to point to your SDK path!")
   endif()
 endif()
 
 project(BetterTrackPlug)
-include("$ENV{DOLCESDK}/share/dolce.cmake" REQUIRED)
+include("${VITASDK}/share/vita.cmake" REQUIRED)
 
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wl,-q -Wall -O3 -std=gnu99")
 set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -nostdlib")
@@ -32,11 +32,12 @@ target_link_libraries(${PROJECT_NAME}
   SceDebugForDriver_stub
   SceSysrootForKernel_stub
   SceIofilemgr_stub
+  SceSysrootForDriver_stub
   SceLibc_stub
   gcc
   -nostdlib
 )
-dolce_create_self(${PROJECT_NAME}.skprx ${PROJECT_NAME}
+vita_create_self(${PROJECT_NAME}.skprx ${PROJECT_NAME}
   UNSAFE
   CONFIG ${CMAKE_SOURCE_DIR}/BetterTrackPlug.yml
 )
