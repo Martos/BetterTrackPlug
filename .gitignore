@@ -59,3 +59,5 @@ BetterTrackPlug
 *.out
 *.velf
 *.cmake
+*.vpk
+appsce_sysparam.sfo
