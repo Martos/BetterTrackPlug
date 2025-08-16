@@ -50,3 +50,5 @@ Temporary Items
 build/
 
 *.skprx
+CMakeCache.txt
+CmakeFiles/

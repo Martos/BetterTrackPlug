@@ -1,5 +1,0 @@
-/build/git/src/CMakeFiles/BetterTrackPlug.dir
-/build/git/src/CMakeFiles/BetterTrackPlug-velf.dir
-/build/git/src/CMakeFiles/BetterTrackPlug.skprx-self.dir
-/build/git/src/CMakeFiles/edit_cache.dir
-/build/git/src/CMakeFiles/rebuild_cache.dir
